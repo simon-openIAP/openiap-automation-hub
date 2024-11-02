@@ -1,41 +1,41 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, Users, LineChart, Youtube, Book, MessageCircle } from "lucide-react";
+import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes } from "lucide-react";
 
 const Index = () => {
   const businessFeatures = [
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Automate Tasks",
-      description: "Automate any task or process in minutes with our simple platform."
+      title: "Process Automation",
+      description: "Streamline your business processes and automate workflows across departments while maintaining full control and visibility."
     },
     {
       icon: <LineChart className="w-6 h-6" />,
-      title: "Connect Systems",
-      description: "Seamlessly integrate your existing systems and workflows."
+      title: "Intelligent Integration",
+      description: "Connect and automate your business systems and data sources to drive better decision-making and efficiency."
     },
     {
       icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Stay in Control",
-      description: "Keep full visibility while scaling your automation."
+      title: "Enhanced Operations",
+      description: "Optimize your business operations through powerful automation tools that adapt to your specific needs."
     }
   ];
 
-  const resources = [
+  const developerFeatures = [
     {
-      icon: <Youtube className="w-6 h-6" />,
-      title: "Video Tutorials",
-      description: "Learn through our video guides"
+      icon: <Code2 className="w-6 h-6" />,
+      title: "Seamless Integration",
+      description: "Build and deploy integrations that connect all your systems and processes into a unified automation workflow."
     },
     {
-      icon: <Book className="w-6 h-6" />,
-      title: "Documentation",
-      description: "Access detailed documentation"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enterprise-Ready Platform",
+      description: "Develop secure and scalable automation solutions that meet your organization's complex requirements."
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Community",
-      description: "Get help from our community"
+      icon: <Boxes className="w-6 h-6" />,
+      title: "Unified Platform",
+      description: "Create comprehensive automation solutions that integrate seamlessly with your existing technology stack."
     }
   ];
 
@@ -44,25 +44,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          We Make Custom Data Simple
+          OpenIAP: Unified Enterprise Automation
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          Automate your tasks and connect your systems in minutes.
+          A powerful platform that seamlessly integrates and automates your business processes, systems, and workflows across the entire organization.
         </p>
-        <div className="flex gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8">
-            Download Now
-          </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8">
-            Documentation
-          </Button>
-        </div>
+        <Button size="lg" className="text-lg px-8">
+          Get Started
+        </Button>
       </section>
 
-      {/* Main Features Section */}
+      {/* Business Solutions Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Simple Automation</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Transform Your Business Operations</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {businessFeatures.map((feature, index) => (
               <Card key={index} className="bg-background">
@@ -79,19 +74,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Resources Section */}
+      {/* Technical Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Resources</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Power Your Integration Strategy</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {resources.map((resource, index) => (
+            {developerFeatures.map((feature, index) => (
               <Card key={index}>
                 <CardHeader>
-                  <div className="mb-4 text-primary">{resource.icon}</div>
-                  <CardTitle>{resource.title}</CardTitle>
+                  <div className="mb-4 text-primary">{feature.icon}</div>
+                  <CardTitle>{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{resource.description}</p>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -99,21 +94,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Integration Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Start Automating Today</h2>
+          <h2 className="text-3xl font-bold mb-6">Complete Integration Platform</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            OpenIAP is open source automation made simple.
+            OpenIAP connects all your systems, processes, and workflows into a single, powerful automation platform that drives efficiency and innovation across your organization.
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
-              View on Github
-            </Button>
-          </div>
+          <Button size="lg" className="text-lg px-8">
+            Start Automating Today
+          </Button>
         </div>
       </section>
     </div>
