@@ -6,18 +6,18 @@ const Index = () => {
   const businessFeatures = [
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Collaborative Efficiency",
-      description: "Work seamlessly with developers while automating tasks across departments, combining business expertise with technical capabilities."
+      title: "Process Automation",
+      description: "Streamline your business processes and automate workflows across departments while maintaining full control and visibility."
     },
     {
       icon: <LineChart className="w-6 h-6" />,
-      title: "Data-Driven Decisions",
-      description: "Bridge the gap between technical data and business insights, enabling better decision-making across your organization."
+      title: "Intelligent Integration",
+      description: "Connect and automate your business systems and data sources to drive better decision-making and efficiency."
     },
     {
       icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Enhanced Workflows",
-      description: "Create and modify automation workflows collaboratively, combining business knowledge with technical expertise."
+      title: "Enhanced Operations",
+      description: "Optimize your business operations through powerful automation tools that adapt to your specific needs."
     }
   ];
 
@@ -25,17 +25,17 @@ const Index = () => {
     {
       icon: <Code2 className="w-6 h-6" />,
       title: "Seamless Integration",
-      description: "Build solutions that business teams can easily understand and modify, creating a collaborative automation environment."
+      description: "Build and deploy integrations that connect all your systems and processes into a unified automation workflow."
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise-Ready Platform",
-      description: "Develop secure solutions that both technical and non-technical teams can confidently use and manage."
+      description: "Develop secure and scalable automation solutions that meet your organization's complex requirements."
     },
     {
       icon: <Boxes className="w-6 h-6" />,
-      title: "Unified Experience",
-      description: "Create integrations that bridge technical capabilities with business needs, enabling true cross-functional collaboration."
+      title: "Unified Platform",
+      description: "Create comprehensive automation solutions that integrate seamlessly with your existing technology stack."
     }
   ];
 
@@ -44,20 +44,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          OpenIAP: Where Business Meets Technology
+          OpenIAP: Unified Enterprise Automation
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          A unified platform where business teams and developers collaborate seamlessly to create powerful automation solutions.
+          A powerful platform that seamlessly integrates and automates your business processes, systems, and workflows across the entire organization.
         </p>
         <Button size="lg" className="text-lg px-8">
           Get Started
         </Button>
       </section>
 
-      {/* Business Perspective Section */}
+      {/* Business Solutions Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Empower Your Business Vision</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Transform Your Business Operations</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {businessFeatures.map((feature, index) => (
               <Card key={index} className="bg-background">
@@ -74,10 +74,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Technical Perspective Section */}
+      {/* Technical Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Enable Technical Excellence</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Power Your Integration Strategy</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {developerFeatures.map((feature, index) => (
               <Card key={index}>
@@ -94,15 +94,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Bridge the Gap Section */}
+      {/* Integration Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">True Collaboration in Action</h2>
+          <h2 className="text-3xl font-bold mb-6">Complete Integration Platform</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            OpenIAP brings together business expertise and technical capabilities in one unified platform, enabling seamless collaboration between teams to create powerful automation solutions.
+            OpenIAP connects all your systems, processes, and workflows into a single, powerful automation platform that drives efficiency and innovation across your organization.
           </p>
           <Button size="lg" className="text-lg px-8">
-            Start Collaborating Today
+            Start Automating Today
           </Button>
         </div>
       </section>
