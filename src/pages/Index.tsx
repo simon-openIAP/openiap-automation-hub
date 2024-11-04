@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const businessFeatures = [
@@ -41,6 +42,21 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="border-b">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-xl font-bold">OpenIAP</div>
+            <div className="flex gap-6">
+              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              <Link to="/solutions" className="hover:text-primary transition-colors">Solutions</Link>
+              <Link to="/pricing" className="hover:text-primary transition-colors">Pricing</Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -94,16 +110,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Integration Section */}
+      {/* Contact Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Complete Integration Platform</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            OpenIAP connects all your systems, processes, and workflows into a single, powerful automation platform that drives efficiency and innovation across your organization.
+            Let us help you transform your business with automation. Reach out to our team today.
           </p>
-          <Button size="lg" className="text-lg px-8">
-            Start Automating Today
-          </Button>
+          <div className="flex justify-center gap-4">
+            <Button size="lg" className="text-lg px-8" asChild>
+              <Link to="/contact">Contact Us</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="text-lg px-8" asChild>
+              <a href="https://calendly.com/openiap" target="_blank" rel="noopener noreferrer">
+                Schedule a Demo
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
