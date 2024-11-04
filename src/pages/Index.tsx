@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes, Cloud, Cog, GitBranch } from "lucide-react";
+import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes, Cloud, Cog, GitBranch, Zap, Brain, Lock, Globe, Rocket, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -40,6 +40,42 @@ const Index = () => {
     }
   ];
 
+  const technicalFeatures = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Integration",
+      description: "Leverage artificial intelligence and machine learning capabilities to enhance your automation workflows and decision-making processes."
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Low-Code Platform",
+      description: "Build complex automation workflows with minimal coding using our intuitive visual interface and pre-built components."
+    },
+    {
+      icon: <Lock className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Ensure your automation processes are secure with enterprise-grade security features and compliance standards."
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Rapid Implementation",
+      description: "Get started quickly with pre-built templates and workflows. Deploy your first automation within days, not months."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global Community",
+      description: "Join a worldwide community of developers and businesses using OpenIAP. Share knowledge and best practices."
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Customer Success",
+      description: "Our dedicated support team ensures your success with comprehensive documentation and personalized assistance."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -65,9 +101,14 @@ const Index = () => {
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
           Combine RPA, Low-Code, AI, and IoT in one comprehensive automation ecosystem. Build powerful workflows without the enterprise price tag.
         </p>
-        <Button size="lg" className="text-lg px-8">
-          Get Started
-        </Button>
+        <div className="flex gap-4 justify-center">
+          <Button size="lg" className="text-lg px-8">
+            Get Started
+          </Button>
+          <Button size="lg" variant="outline" className="text-lg px-8">
+            View Demo
+          </Button>
+        </div>
       </section>
 
       {/* Business Solutions Section */}
@@ -103,6 +144,46 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical Features Section */}
+      <section className="bg-secondary/50 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Advanced Capabilities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {technicalFeatures.map((feature, index) => (
+              <Card key={index} className="bg-background">
+                <CardHeader>
+                  <div className="mb-4 text-primary">{feature.icon}</div>
+                  <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Customer Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <div className="mb-4 text-primary">{benefit.icon}</div>
+                  <CardTitle>{benefit.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
