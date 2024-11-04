@@ -1,9 +1,10 @@
 import { HeroSection } from "@/components/landing/HeroSection";
 import { FeaturesSection } from "@/components/landing/FeaturesSection";
 import { FeatureCard } from "@/components/landing/FeatureCard";
-import { Code2, Shield, Brain, Zap, Lock, Globe, Rocket, Heart } from "lucide-react";
+import { Code2, Shield, Brain, Zap, Lock, Globe, Rocket, Heart, Cog } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const developerFeatures = [
