@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes } from "lucide-react";
+import { CheckCircle2, Code2, Users, LineChart, Shield, Boxes, Cloud, Cog, GitBranch } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -8,35 +8,35 @@ const Index = () => {
     {
       icon: <Users className="w-6 h-6" />,
       title: "Process Automation",
-      description: "Streamline your business processes and automate workflows across departments while maintaining full control and visibility."
+      description: "Automate business processes across departments while maintaining full control. Connect IT systems, human resources, and IoT devices seamlessly."
     },
     {
-      icon: <LineChart className="w-6 h-6" />,
-      title: "Intelligent Integration",
-      description: "Connect and automate your business systems and data sources to drive better decision-making and efficiency."
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Flexible Deployment",
+      description: "Deploy on-premise or use our cloud offering. Scale from small businesses to large enterprises with our adaptable solutions."
     },
     {
-      icon: <CheckCircle2 className="w-6 h-6" />,
-      title: "Enhanced Operations",
-      description: "Optimize your business operations through powerful automation tools that adapt to your specific needs."
+      icon: <GitBranch className="w-6 h-6" />,
+      title: "Open Source Freedom",
+      description: "Access and modify our software without commercial restrictions. Join our community-driven approach to innovation."
     }
   ];
 
   const developerFeatures = [
     {
       icon: <Code2 className="w-6 h-6" />,
-      title: "Seamless Integration",
-      description: "Build and deploy integrations that connect all your systems and processes into a unified automation workflow."
+      title: "OpenRPA",
+      description: "Our core framework for robotic process automation. Automate tasks and integrate applications with minimal coding required."
+    },
+    {
+      icon: <Cog className="w-6 h-6" />,
+      title: "OpenIAP Flow",
+      description: "Advanced workflow automation with extended capabilities. Perfect for complex enterprise automation needs."
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise-Ready Platform",
-      description: "Develop secure and scalable automation solutions that meet your organization's complex requirements."
-    },
-    {
-      icon: <Boxes className="w-6 h-6" />,
-      title: "Unified Platform",
-      description: "Create comprehensive automation solutions that integrate seamlessly with your existing technology stack."
+      title: "Enterprise Support",
+      description: "Get expert consulting services to implement and optimize your automation strategy effectively."
     }
   ];
 
@@ -60,10 +60,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-24 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          OpenIAP: Unified Enterprise Automation
+          Open Source Automation Platform
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-          A powerful platform that seamlessly integrates and automates your business processes, systems, and workflows across the entire organization.
+          Combine RPA, Low-Code, AI, and IoT in one comprehensive automation ecosystem. Build powerful workflows without the enterprise price tag.
         </p>
         <Button size="lg" className="text-lg px-8">
           Get Started
@@ -73,7 +73,7 @@ const Index = () => {
       {/* Business Solutions Section */}
       <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Transform Your Business Operations</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose OpenIAP?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {businessFeatures.map((feature, index) => (
               <Card key={index} className="bg-background">
@@ -93,7 +93,7 @@ const Index = () => {
       {/* Technical Solutions Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Power Your Integration Strategy</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {developerFeatures.map((feature, index) => (
               <Card key={index}>
